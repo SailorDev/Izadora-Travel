@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "chokidar": "^3.2.2",
