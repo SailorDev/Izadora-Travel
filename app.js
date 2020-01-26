@@ -1,3 +1,4 @@
+import compression from 'compression';
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
@@ -7,6 +8,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -65,6 +67,8 @@ app.use(
     ]
   })
 );
+
+app.use(compression());
 
 // Test middleware
 app.use((req, res, next) => {
